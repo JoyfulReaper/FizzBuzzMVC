@@ -1,0 +1,143 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+:root {
+    --primary-color: #1d5888;
+    --secondary-color: #ff993b;
+    --dark-color: #292929;
+    --white-color: #dff3e4;
+}
+
+nav {
+    background-color: var(--dark-color);
+}
+
+.logoFont {
+    font-family: 'Zen Tokyo Zoo', cursive;
+}
+
+.Fizz {
+    color: darkgreen;
+}
+
+.FizzBuzz {
+    color: red;
+    font-weight: bold;
+}
+
+.Buzz {
+    color: darkblue;
+}
+
+footer .social > a {
+    color: var(--white-color);
+    opacity: 0.75;
+}
+
+footer .social > a:hover {
+    opacity: 0.90;
+    color: var(--secondary-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-color);
+}
+
+main > .container {
+    padding: 60px 15px 0;
+}
+
+.bsicon {
+    color: purple;
+}
+
+.jsicon {
+    color: rgb(226, 211, 4);
+}
+
+.html5icon {
+    color: orangered;
+}
+
+.cssicon {
+    color: rgb(11, 82, 214)
+}
+
+.checklist > li i {
+    color: var(--secondary-color);
+}
+
+.alight {
+    color: var(--white-color);
+}
+
+    .alight:hover {
+        color: #95af9c;
+    }
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+    color: #0366d6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+}
+
+body {
+    color: var(--dark-color);
+}
+
+.footer {
+    background-color: var(--dark-color);
+    padding-right: 1rem;
+}

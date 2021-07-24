@@ -1,0 +1,50 @@
+﻿@model FizzBuzzMVC.Models.FizzBuzzModel;
+
+<div class="container mt-5">
+    <div class="row row-cols-1 row-cols-lg-2">
+        <div class="col-lg-4 col">
+            <div class="row border-bottom border-2">
+                <h1 class="display-5 logoFont">FizzBuzz: A coding Project</h1>
+                <h4 class="lead">
+                    When it counts you Fizz Buzz. The classic coding challenge that
+                    prints the numbers from 1 to 100 and for multiples of '3' display <span class="Fizz">"Fizz"</span> instead of the number and for multiples
+                    of '5' display <span class="Buzz">"Buzz."</span> If the number is a multiple of both display <span class="FizzBuzz">"FizzBuzz."</span>
+                </h4>
+            </div>
+            <div class="row">
+                <h2 class="mt-2">Instructions</h2>
+                <p>
+                    Enter a fizz and a buzz value. Press the button and the values will appear.
+                </p>
+            </div>
+        </div>
+        <div class="col-lg-8 col border-start border-2">
+            <h5>Enter Values</h5>
+            <form asp-controller="Home" asp-action="FizzBuzz" method="post" class="row gy-2 gx-3">
+                <div class="form-group">
+                    <label asp-for="FizzValue">Fizz Value</label>
+                    <input id="fizz" asp-for="FizzValue" class="form-control" type="number" placeholder="Fizz" value="3">
+                </div>
+                <div class="form-group">
+                    <label asp-for="BuzzValue">Buzz Value</label>
+                    <input id="buzz" asp-for="BuzzValue" class="form-control" type="number" placeholder="Buzz" value="5">
+                </div>
+                <div class="col-12 d-flex justify-content-end">
+                    <button id="btnSubmit" type="button" class="btn btn-dark btn-large">FizzBuzz it</button>
+                </div>
+            </form>
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="mt-2 border-bottom border-2">Results</h2>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-sm">
+                            <tbody id="results">
+                                <!-- Results go Here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
