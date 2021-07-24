@@ -23,9 +23,23 @@ namespace FizzBuzzMVC.Controllers
             return View();
         }
 
+        [HttpGet]
         public IActionResult FizzBuzz()
         {
-            return View();
+            FizzBuzzModel fizzbuzz = new FizzBuzzModel();
+
+            fizzbuzz.FizzValue = 3;
+            fizzbuzz.BuzzValue = 5;
+
+            return View(fizzbuzz);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult FizzBuzz(FizzBuzzModel fizzbuzz)
+        {
+
+            return View(fizzbuzz);
         }
 
         public IActionResult Privacy()
