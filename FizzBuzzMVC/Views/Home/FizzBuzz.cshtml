@@ -1,4 +1,8 @@
-﻿@model FizzBuzzMVC.Models.FizzBuzzModel;
+﻿@{
+    ViewData["Title"] = "Fizz Buzz";
+}
+
+@model FizzBuzzMVC.Models.FizzBuzzModel;
 
 <div class="container mt-5">
     <div class="row row-cols-1 row-cols-lg-2">
@@ -30,18 +34,41 @@
                     <input id="buzz" asp-for="BuzzValue" class="form-control" type="number" placeholder="Buzz" value="5">
                 </div>
                 <div class="col-12 d-flex justify-content-end">
-                    <button id="btnSubmit" type="button" class="btn btn-dark btn-large">FizzBuzz it</button>
+                    <button id="btnSubmit" type="submit" class="btn btn-dark btn-large">FizzBuzz it</button>
                 </div>
             </form>
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 mb-5">
                     <h2 class="mt-2 border-bottom border-2">Results</h2>
                     <div class="table-responsive">
-                        <table class="table table-striped table-sm">
-                            <tbody id="results">
-                                <!-- Results go Here -->
-                            </tbody>
-                        </table>
+                        @if (Model.Result.Count > 0)
+                        {
+                            <table class="table table-striped table-sm">
+                                <thead>
+                                    <tr>
+                                        <th colspan="5">Fizz Buzz Results</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="results">
+                                    @for (int i = 0; i < Model.Result.Count(); i += 5)
+                                    {
+                                        <tr>
+                                            @for (int j = 0; j < 5; j++)
+                                            {
+                                                @if (Model.Result[i + j].Length > 3)
+                                                {
+                                                    <td class="@Model.Result[i + j]">@Model.Result[i + j]</td>
+                                                }
+                                                else
+                                                {
+                                                    <td>@Model.Result[i + j]</td>
+                                                }
+                                            }
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        }
                     </div>
                 </div>
             </div>

@@ -38,6 +38,35 @@ namespace FizzBuzzMVC.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult FizzBuzz(FizzBuzzModel fizzbuzz)
         {
+            List<string> fbItems = new();
+
+            bool isFizz;
+            bool isBuzz;
+
+            for(int i = 1; i <= 100; i++)
+            {
+                isFizz = i % fizzbuzz.FizzValue == 0;
+                isBuzz = i % fizzbuzz.BuzzValue == 0;
+
+                if(isBuzz && isFizz)
+                {
+                    fbItems.Add("FizzBuzz");
+                }
+                else if(isFizz)
+                {
+                    fbItems.Add("Fizz");
+                }
+                else if(isBuzz)
+                {
+                    fbItems.Add("Buzz");
+                }
+                else
+                {
+                    fbItems.Add(i.ToString());
+                }
+            }
+
+            fizzbuzz.Result = fbItems;
 
             return View(fizzbuzz);
         }
